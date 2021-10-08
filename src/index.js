@@ -4,11 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import HelloWorld from './componets/HelloWorld';
+import Parent from '../src/componets/Parent';
 
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
-    <HelloWorld name="Adarsh"/>
+    {/* <HelloWorld name="Adarsh"/> */}
+    <Parent />
   </React.StrictMode>,
   document.getElementById('root'));
 
