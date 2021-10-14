@@ -1,5 +1,12 @@
 import React from 'react';
 import './App.css'; // this is how you import CSS
+import About from './componets/About';
+import Contact from './componets/Contact';
+import Home from './componets/Home';
+import Parent from './componets/Parent';
+import { Link, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import AboutMore from './componets/AboutMore';
+import PageNotFound from './componets/404';
 // import abc from 'xyz'; // this is how you import JS
 
 // JS Function but returning bunch of HTML element
@@ -31,7 +38,40 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <h1>This is a Class Component</h1>
+        <Router>
+          <div style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            width: '50%',
+            background: 'red',
+            margin: 'auto',
+            padding: "20px"
+          }}>
+            <Link to="/home">Home</Link>
+            <Link to="/about">About</Link>
+            <Link to="/contact">Contact</Link>
+          </div>
+          <Switch>
+            <Route path="/home">
+              <Home /> {/* /home */}
+            </Route>
+            <Route path="/contact">
+              <Contact /> {/* /contact */}
+            </Route>
+            <Route path="/about" exact>
+              <About /> {/* /about */}
+            </Route>
+            <Route path="/about/more">
+              <AboutMore /> {/* /about */}
+            </Route>
+            <Route path="/" exact>
+              <Home /> {/* /home */}
+            </Route>
+            <Route path="*">
+              <PageNotFound />
+            </Route>
+          </Switch>
+        </Router>
       </>
     )
   }
