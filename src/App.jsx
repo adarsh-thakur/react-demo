@@ -7,6 +7,7 @@ import Parent from './componets/Parent';
 import { Link, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import AboutMore from './componets/AboutMore';
 import PageNotFound from './componets/404';
+import RestDemo from './componets/RestDemo';
 // import abc from 'xyz'; // this is how you import JS
 
 // JS Function but returning bunch of HTML element
@@ -65,7 +66,7 @@ class App extends React.Component {
               <AboutMore /> {/* /about */}
             </Route>
             <Route path="/" exact>
-              <Home /> {/* /home */}
+              <RestDemo /> {/* /home */}
             </Route>
             <Route path="*">
               <PageNotFound />
