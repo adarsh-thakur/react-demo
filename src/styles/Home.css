@@ -1,4 +1,41 @@
 .wrapper{
     height: 100%;
     background-color: rgb(24, 238, 149);
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding-top: 200px;
+    padding-left: 20%;
+    /* text-align: center; */
+}
+.child-div{
+    height: 25%;
+    font-size: 36px;
+    text-align: center;
+}
+.child-div:nth-child(2n){
+    background-color: yellow;
+}
+label{
+    font-size: 24px;
+}
+input {
+    width: 50%;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+}
+.field-wrapper{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+button{
+    width: 50%;
+    height: 40px;
+    font-size: 20px;
+    background-color: yellow;
+    border: none;
+    border-radius: 10px;
 }
